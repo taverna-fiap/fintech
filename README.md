@@ -1,2 +1,1 @@
-# Fintech
 Fintech Fiap
