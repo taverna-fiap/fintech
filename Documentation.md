@@ -95,7 +95,7 @@ Define uma etiqueta para categorizar as transações.
 ### 📌 Atributos:
 
 - **typeId** (String) – Identificador único da tag.
-- **name** (String) – Nome da tag (ex.: "Pix", "TED", "Boleto").
+- **name** (String) – Nome da tag (por exemplo, "Contas de casa", "Gastos Obrigatórios").
 
 ### 🔧 Métodos:
 
