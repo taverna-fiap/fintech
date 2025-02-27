@@ -1,3 +1,5 @@
+package Models;
+
 public class Card {
 
     private String cardId;

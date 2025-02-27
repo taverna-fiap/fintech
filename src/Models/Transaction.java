@@ -1,3 +1,5 @@
+package Models;
+
 public class Transaction {
 
     private String transictionId;
