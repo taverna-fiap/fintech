@@ -5,11 +5,11 @@ public class Tag {
     private String tagId;
     private String tagName;
 
-    public String getTypeId() {
+    public String getTagId() {
         return tagId;
     }
 
-    public void setTypeId(String typeId) {
+    public void setTagId(String typeId) {
         this.tagId = typeId;
     }
 
