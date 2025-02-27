@@ -28,7 +28,7 @@ Representa um usuário do sistema, contendo suas informações pessoais, sua con
 
 ## 🏦 Account
 
-Descrição:**  
+Descrição:  
 Representa uma conta bancária vinculada a um usuário.
 
 ### 📌 Atributos:
@@ -181,7 +181,7 @@ Gerencia os processos de autenticação, incluindo login e registro de usuários
 
 - **users** (List<User>) – Lista de usuários cadastrados (pode ser gerenciada via DataService).
 
-### 🔧 Métodos:**
+### 🔧 Métodos:
 
 - **register(String name, String email, String password, String cpf, String birthDate, String phone, String address)**  
   ➜ Registra um novo usuário no sistema.
