@@ -1,6 +1,6 @@
 package Models;
 
-public class Person {
+public class User {
 
         private int id;
         private String name;
@@ -67,7 +67,7 @@ public class Person {
     }
 
     //criando objeto pessoa
-        public Person(String name, String email, String cpf, String phone, String adress, String birthay) {
+        public User(String name, String email, String cpf, String phone, String adress, String birthay) {
             this.name = name;
             this.email = email;
             this.cpf = cpf;
