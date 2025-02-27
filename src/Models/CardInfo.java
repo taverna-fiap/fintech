@@ -1,6 +1,6 @@
 package Models;
 
-public class Card {
+public class CardInfo {
 
     private String cardId;
     private String cardName;
@@ -57,7 +57,7 @@ public class Card {
         this.paymentDate = paymentDate;
     }
 
-    public Card(String cardId, String cardName, String cardNumber, String cvv, String expiration, String paymentDate) {
+    public CardInfo(String cardId, String cardName, String cardNumber, String cvv, String expiration, String paymentDate) {
         this.cardId = cardId;
         this.cardName = cardName;
         this.cardNumber = cardNumber;
