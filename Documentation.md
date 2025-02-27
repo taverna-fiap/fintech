@@ -139,12 +139,9 @@ Gera e representa o extrato bancário de uma conta para um determinado período.
 - **getStatementDetails()** – Retorna os detalhes do extrato.
 - **Getters e setters** – Métodos de acesso aos atributos.
 
-<p style="font-size: 0px">a</p>
-
 ---
 
 ## 🔧 Serviços:
-<p style="font-size: 0px">a</p>
 
 ---
 
