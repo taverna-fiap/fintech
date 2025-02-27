@@ -1,9 +1,4 @@
-import br.com.moneysense.Card.Card;
-import br.com.moneysense.Category.Category;
-import br.com.moneysense.Transaction.Transaction;
-import br.com.moneysense.Type.Type;
-import br.com.moneysense.account.Account;
-import br.com.moneysense.person.Person;
+
 
 public class Main {
 
@@ -22,7 +17,7 @@ public class Main {
         System.out.println(toCategory.getCategoryId());
         System.out.println(toTransaction.getValue());
     }
-};
+}
 
 
 
