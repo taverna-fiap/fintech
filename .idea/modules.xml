@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MoneySense.iml" filepath="$PROJECT_DIR$/MoneySense.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FintechFiap.iml" filepath="$PROJECT_DIR$/FintechFiap.iml" />
     </modules>
   </component>
 </project>
