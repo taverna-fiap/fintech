@@ -1,5 +1,6 @@
 package models.entities;
 
+import services.auth.Login;
 import models.enums.TransactionStatus;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -11,32 +12,28 @@ public class Transaction {
     private LocalDateTime timestamp;
     private TransactionStatus status;
     private Account account;
-    private Category category; // Categoria da transação
 
-    public Transaction(BigDecimal amount, Account account, Category category) {
+    public Transaction(BigDecimal amount, Account account) {
+        if (!Login.isUserLoggedIn()) {
+            throw new IllegalStateException("Erro: Você precisa estar logado para fazer uma transação.");
+        }
+
         this.transactionId = UUID.randomUUID().toString();
         this.amount = amount;
         this.timestamp = LocalDateTime.now();
         this.status = TransactionStatus.PENDING;
         this.account = account;
-        this.category = category;
     }
 
     public void process() {
         try {
             account.debit(amount, transactionId);
             this.status = TransactionStatus.COMPLETED;
+            System.out.println("Transação concluída com sucesso.");
         } catch (IllegalArgumentException e) {
             this.status = TransactionStatus.FAILED;
+            System.out.println("Erro ao processar transação: " + e.getMessage());
         }
-    }
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
     }
 
     @Override
@@ -47,7 +44,6 @@ public class Transaction {
                 ", timestamp=" + timestamp +
                 ", status=" + status +
                 ", account=" + account +
-                ", category=" + (category != null ? category.getName() : "Nenhuma") +
                 '}';
     }
 }

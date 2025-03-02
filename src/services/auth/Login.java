@@ -1,22 +1,31 @@
 package services.auth;
+
 import models.entities.User;
-import java.util.Scanner;
 
 public class Login {
-    public static void doLogin() {
-        Scanner scanner = new Scanner(System.in);
+    private static User loggedUser = null;
 
-        System.out.println("=== Login ===");
-        System.out.print("E-mail: ");
-        String email = scanner.nextLine();
-
+    public static void loginUser(String email) {
         for (User user : RegisterService.getUsers()) {
             if (user.getEmail().equalsIgnoreCase(email)) {
+                loggedUser = user;
                 System.out.println("Login realizado com sucesso! Bem-vindo, " + user.getName());
                 return;
             }
         }
-
         System.out.println("Erro: Usuário não encontrado.");
+    }
+
+    public static boolean isUserLoggedIn() {
+        return loggedUser != null;
+    }
+
+    public static User getLoggedUser() {
+        return loggedUser;
+    }
+
+    public static void logout() {
+        loggedUser = null;
+        System.out.println("Logout realizado com sucesso!");
     }
 }

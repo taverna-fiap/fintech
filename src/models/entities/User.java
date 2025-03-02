@@ -1,9 +1,10 @@
 package models.entities;
 
 import java.util.List;
+import java.util.UUID;
 
 public class User {
-    private int id;
+    private String id;
     private String name;
     private String email;
     private String cpf;
@@ -12,8 +13,8 @@ public class User {
     private String birthday;
     private List<Account> accounts;
 
-    public User(int id, String name, String email, String cpf, String phone, String address, String birthday, List<Account> accounts) {
-        this.id = id;
+    public User(String name, String email, String cpf, String phone, String address, String birthday, List<Account> accounts) {
+        this.id = UUID.randomUUID().toString();;
         this.name = name;
         this.email = email;
         this.cpf = cpf;
@@ -23,17 +24,17 @@ public class User {
         this.accounts = accounts;
     }
 
+    public User(String name, String email, String cpf, String phone, String address, String birthday) {
+    }
+
     public List<Account> getAccounts() {
         return accounts;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
