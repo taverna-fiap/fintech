@@ -1,19 +1,26 @@
 package Models;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 public class Transaction {
 
     private String transictionId;
     private String description;
-    private String value;
-    private String date;
+    private Integer amount;
+    private final String timestamp;
     private boolean recorrency;
 
-    public String getDate() {
-        return date;
+    public Transaction(String transictionId, String description, Integer amount, boolean recorrency) {
+        this.transictionId = transictionId;
+        this.description = description;
+        this.amount = amount;
+        this.timestamp = new SimpleDateFormat("dd/MM/yyyy-HHmms").format(Calendar.getInstance().getTime());
+        this.recorrency = recorrency;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public String getTimestamp() {
+        return timestamp;
     }
 
     public String getDescription() {
@@ -40,20 +47,9 @@ public class Transaction {
         this.transictionId = transictionId;
     }
 
-    public String getValue() {
-        return value;
+    public Integer getAmount() {
+        return amount;
     }
 
-    public void setValue(String value) {
-        this.value = value;
-    }
 
-    public Transaction(String transictionId, String description, String value, String date, boolean recorrency) {
-
-        this.transictionId = transictionId;
-        this.description = description;
-        this.value = value;
-        this.date = date;
-        this.recorrency = recorrency;
-    }
 }
