@@ -33,15 +33,15 @@ Representa uma conta bancária vinculada a um usuário.
 
 ### 📌 Atributos:
 
-- **accountNumber** (String) – Número único da conta.
-- **balance** (int) – Saldo da conta (armazenado em centavos).
+- **accountNumber** short – Número único da conta.
+- **Agency** short - numero da agencia
+- **National_regiter** string - registro nacional 
+- **balance** (long) – Saldo da conta (armazenado em centavos).
 - **user** (User) – Usuário proprietário da conta.
 
 ### 🔧 Métodos:
 
-- **➕ deposit(int amount)** – Adiciona um valor (em centavos) ao saldo.
-- **➖ withdraw(int amount)** – Realiza um saque, verificando se há saldo suficiente.
-- **➕ addTransaction(Transaction transaction)** – Adiciona uma transação ao histórico da conta.
+
 - **💡 getBalance()** – Retorna o saldo atual (em centavos).
 - **💡 getConvertedBalance()** – Converte o saldo para reais (divide por 100) e retorna um valor do tipo double.
 - **Getters e setters** – Métodos de acesso aos atributos.

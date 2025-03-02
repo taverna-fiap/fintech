@@ -26,7 +26,7 @@ O Fintech Project é uma simulação de sistema financeiro desenvolvido em Java,
 
 ## 4. Estrutura do Projeto
 
-### Entidades (Models)
+### Entidades (models)
 - **User:** Contém informações pessoais, conta e histórico de transações do usuário.
 - **Account:** Representa a conta bancária do usuário, com saldo armazenado (em centavos) e operações de depósito/saque.
 - **Transaction:** Registra os detalhes de uma transação financeira, incluindo valor, tipo, data e usuário envolvido.
