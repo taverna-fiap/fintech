@@ -1,4 +1,4 @@
-package Models;
+package models;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -10,6 +10,7 @@ public class Transaction {
     private Integer amount;
     private final String timestamp;
     private boolean recorrency;
+    private boolean isProcessed;
 
     public Transaction(String transictionId, String description, Integer amount, boolean recorrency) {
         this.transictionId = transictionId;
@@ -17,6 +18,7 @@ public class Transaction {
         this.amount = amount;
         this.timestamp = new SimpleDateFormat("dd/MM/yyyy-HHmms").format(Calendar.getInstance().getTime());
         this.recorrency = recorrency;
+        this.isProcessed = false;
     }
 
     public String getTimestamp() {
@@ -50,6 +52,7 @@ public class Transaction {
     public Integer getAmount() {
         return amount;
     }
+
 
 
 }

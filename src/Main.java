@@ -1,4 +1,4 @@
-import Models.*;
+import models.*;
 
 public class Main {
 
