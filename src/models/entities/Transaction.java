@@ -36,6 +36,10 @@ public class Transaction {
         }
     }
 
+    public Statement financialStatement() {
+        return new Statement(transactionId, amount, timestamp, status.toString(), account.toString());
+    }
+
     @Override
     public String toString() {
         return "Transaction{" +
