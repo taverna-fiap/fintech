@@ -90,8 +90,8 @@ O projeto é organizado em várias classes principais, com funcionalidades como 
 
 ## Contribuições
 
-Este projeto foi desenvolvido com fins acadêmicos. No entanto, contribuições para melhorar o sistema são bem-vindas. Se você deseja melhorar ou expandir o projeto, sinta-se à vontade para fazer um fork e enviar um pull request com suas modificações.
-
+Para acessar a organization do repositório acesse: https://github.com/taverna-fiap/fintech/
+O repositório também se encontra no link: https://github.com/G-shiy/Fintech
 ## Licença
 
 Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para mais detalhes.
