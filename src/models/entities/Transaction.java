@@ -12,6 +12,14 @@ public class Transaction {
     private LocalDateTime timestamp;
     private TransactionStatus status;
     private Account account;
+    private Statement statement;
+
+
+
+    public Statement financialStatement(String transactionId, BigDecimal amount, LocalDateTime timestamp, Enum<TransactionStatus> status ,Account account) {
+        return new Statement(transactionId, amount, timestamp, status.toString(), account.toString());
+    }
+
 
     public Transaction(BigDecimal amount, Account account) {
         if (!Login.isUserLoggedIn()) {
@@ -23,6 +31,7 @@ public class Transaction {
         this.timestamp = LocalDateTime.now();
         this.status = TransactionStatus.PENDING;
         this.account = account;
+        this.statement = financialStatement(this.transactionId, this.amount, this.timestamp, this.status, this.account);
     }
 
     public void process() {
@@ -36,9 +45,6 @@ public class Transaction {
         }
     }
 
-    public Statement financialStatement() {
-        return new Statement(transactionId, amount, timestamp, status.toString(), account.toString());
-    }
 
     @Override
     public String toString() {
