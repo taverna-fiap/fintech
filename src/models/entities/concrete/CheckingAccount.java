@@ -9,6 +9,11 @@ public class CheckingAccount extends Account {
     private BigDecimal specialCredit;
     public CheckingAccount(int id, String bank, String agency, String account, BigDecimal balance, BigDecimal specialCredit) {
         super(id, bank, agency, account, balance);
+        this.specialCredit = (specialCredit != null) ? specialCredit : BigDecimal.ZERO;
+    }
+    public CheckingAccount(int id, String bank, String agency, String account, BigDecimal balance) {
+        super(id, bank, agency, account, balance);
+        this.specialCredit = BigDecimal.ZERO;
     }
 
     @Override

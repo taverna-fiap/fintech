@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Account {
+public abstract class Account {
     protected int accountId;
     protected String bank;
     protected String agency;
