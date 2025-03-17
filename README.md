@@ -51,7 +51,7 @@ O Fintech Project é uma simulação de sistema financeiro desenvolvido em Java,
 ### Passos para Execução:
 1. **Clonar o Repositório:**
 ```sh
-   git clone https://github.com/seu-usuario/fintech-project.git
+   git clone https://github.com/taverna-fiap/fintech/.git
    cd fintech-project
 ```
 
