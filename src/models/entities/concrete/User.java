@@ -1,4 +1,6 @@
-package models.entities;
+package models.entities.concrete;
+
+import models.entities.abstracts.Account;
 
 import java.util.List;
 import java.util.UUID;

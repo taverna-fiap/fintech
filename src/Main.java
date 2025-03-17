@@ -1,7 +1,7 @@
 import services.auth.Login;
 import services.auth.RegisterService;
-import models.entities.Account;
-import models.entities.Transaction;
+import models.entities.abstracts.Account;
+import models.entities.concrete.Transaction;
 import java.math.BigDecimal;
 
 public class Main {
@@ -19,7 +19,7 @@ public class Main {
 
         System.out.println("\n=== TESTE: TENTAR TRANSAÇÃO SEM LOGIN ===");
         try {
-            Account account = new Account("123", "Banco A", "001", "45678-9", new BigDecimal("5000"));
+            Account account = new Account(1, "Banco A", "001", "45678-9", new BigDecimal("5000"));
             Transaction transaction = new Transaction(new BigDecimal("200"), account);
             transaction.process();
         } catch (IllegalStateException e) {
@@ -28,7 +28,7 @@ public class Main {
 
         System.out.println("\n=== TESTE: TRANSAÇÃO COM LOGIN ===");
         Login.loginUser("teste@gmail"); // Faz login
-        Account account = new Account("123", "Banco A", "001", "45678-9", new BigDecimal("5000"));
+        Account account = new Account(1, "Banco A", "001", "45678-9", new BigDecimal("5000"));
         Transaction transaction = new Transaction(new BigDecimal("200"), account);
         transaction.process(); // Deve funcionar
 
@@ -43,7 +43,7 @@ public class Main {
 
         System.out.println("\n=== TESTE: SALDO INSUFICIENTE ===");
         Login.loginUser("teste@gmail"); // Faz login novamente
-        Account lowBalanceAccount = new Account("456", "Banco B", "002", "98765-4", new BigDecimal("50"));
+        Account lowBalanceAccount = new Account(2, "Banco B", "002", "98765-4", new BigDecimal("50"));
         try {
             Transaction failedTransaction = new Transaction(new BigDecimal("200"), lowBalanceAccount);
             failedTransaction.process();
