@@ -1,6 +1,6 @@
 package br.com.fintech.services.auth;
 
-import models.entities.concrete.User;
+import br.com.fintech.models.entities.concrete.User;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;

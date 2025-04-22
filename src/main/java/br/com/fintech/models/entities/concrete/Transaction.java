@@ -1,8 +1,8 @@
 package br.com.fintech.models.entities.concrete;
 
 import br.com.fintech.models.entities.abstracts.Account;
-import services.auth.Login;
-import models.enums.TransactionStatus;
+import br.com.fintech.services.auth.Login;
+import br.com.fintech.models.enums.TransactionStatus;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -15,6 +15,9 @@ public class Transaction {
     private Account account;
     private Statement statement;
 
+    public Transaction() {
+
+    }
 
 
     public Statement financialStatement(String transactionId, BigDecimal amount, LocalDateTime timestamp, Enum<TransactionStatus> status ,Account account) {
@@ -46,6 +49,53 @@ public class Transaction {
         }
     }
 
+    public String getTransactionId() {
+        return transactionId;
+    }
+
+    public void setTransactionId(String transactionId) {
+        this.transactionId = transactionId;
+    }
+
+    public BigDecimal getAmount() {
+        return amount;
+    }
+
+    public void setAmount(BigDecimal amount) {
+        this.amount = amount;
+    }
+
+    public LocalDateTime getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(LocalDateTime timestamp) {
+        this.timestamp = timestamp;
+    }
+
+    public TransactionStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(TransactionStatus status) {
+        this.status = status;
+    }
+
+    public Account getAccount() {
+        return account;
+    }
+
+    public void setAccount(Account account) {
+        this.account = account;
+    }
+
+    public Statement getStatement() {
+        return statement;
+    }
+
+    public void setStatement(Statement statement) {
+        this.statement = statement;
+    }
 
     @Override
     public String toString() {

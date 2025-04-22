@@ -9,8 +9,8 @@ public class SavingAccount extends Account {
     private BigDecimal tax;
 
 
-    public SavingAccount(int accountId, String bank, String agency, String account, BigDecimal balance, BigDecimal tax ) {
-        super(accountId, bank, agency, account, balance);
+    public SavingAccount(int accountId,String userId, String bank, String agency, String account, BigDecimal balance, BigDecimal tax ) {
+        super(accountId, userId,bank, agency, account, balance);
         this.tax = tax;
     }
 
@@ -31,5 +31,22 @@ public class SavingAccount extends Account {
         System.out.println("Income after applying income" + income);
     }
 
+    public BigDecimal getTax() {
+        return tax;
+    }
 
+    @Override
+    public String toString() {
+        return "SavingAccount{" +
+               "tax=" + tax +
+               ", accountId=" + accountId +
+               ", userId='" + userId + '\'' +
+               ", bank='" + bank + '\'' +
+               ", agency='" + agency + '\'' +
+               ", account='" + account + '\'' +
+               ", balance=" + balance +
+               ", transactions=" + transactions +
+               ", card=" + card +
+               '}';
+    }
 }

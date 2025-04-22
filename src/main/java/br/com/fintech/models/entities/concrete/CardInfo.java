@@ -19,6 +19,10 @@ public class CardInfo {
         this.paymentDate = paymentDate;
     }
 
+    public CardInfo() {
+
+    }
+
 
     public String getCardId() {
         return cardId;
@@ -55,5 +59,18 @@ public class CardInfo {
     }
     public void setPaymentDate(String paymentDate) {
         this.paymentDate = paymentDate;
+    }
+
+
+    @Override
+    public String toString() {
+        return "CardInfo{" +
+               "cardId='" + cardId + '\'' +
+               ", cardName='" + cardName + '\'' +
+               ", cardNumber='" + cardNumber + '\'' +
+               ", cvv='" + cvv + '\'' +
+               ", expiration='" + expiration + '\'' +
+               ", paymentDate='" + paymentDate + '\'' +
+               '}';
     }
 }

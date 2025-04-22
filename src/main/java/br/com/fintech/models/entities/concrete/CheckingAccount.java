@@ -7,12 +7,12 @@ import java.math.BigDecimal;
 
 public class CheckingAccount extends Account {
     private BigDecimal specialCredit;
-    public CheckingAccount(int id, String bank, String agency, String account, BigDecimal balance, BigDecimal specialCredit) {
-        super(id, bank, agency, account, balance);
+    public CheckingAccount(int accountId,String userId,String bank, String agency, String account, BigDecimal balance, BigDecimal specialCredit) {
+        super(accountId,userId ,bank, agency, account, balance);
         this.specialCredit = (specialCredit != null) ? specialCredit : BigDecimal.ZERO;
     }
-    public CheckingAccount(int id, String bank, String agency, String account, BigDecimal balance) {
-        super(id, bank, agency, account, balance);
+    public CheckingAccount(int accountId,String userId, String bank, String agency, String account, BigDecimal balance) {
+        super(accountId,userId ,bank, agency, account, balance);
         this.specialCredit = BigDecimal.ZERO;
     }
 
@@ -26,8 +26,20 @@ public class CheckingAccount extends Account {
             addTransactionLog(transactionId, TransactionStatus.FAILED, amount);
             throw new IllegalArgumentException("insufficient balance");
         }
-
-
     }
 
+    @Override
+    public String toString() {
+        return "CheckingAccount{" +
+               "specialCredit=" + specialCredit +
+               ", accountId=" + accountId +
+               ", userId='" + userId + '\'' +
+               ", bank='" + bank + '\'' +
+               ", agency='" + agency + '\'' +
+               ", account='" + account + '\'' +
+               ", balance=" + balance +
+               ", transactions=" + transactions +
+               ", card=" + card +
+               '}';
+    }
 }

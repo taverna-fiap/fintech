@@ -1,6 +1,6 @@
 package br.com.fintech.services;
 
-import models.entities.concrete.Transaction;
+import br.com.fintech.models.entities.concrete.Transaction;
 
 public class TransactionService {
     public void processTransaction(Transaction transaction) {

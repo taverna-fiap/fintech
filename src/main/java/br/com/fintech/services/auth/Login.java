@@ -1,6 +1,6 @@
 package br.com.fintech.services.auth;
 
-import models.entities.concrete.User;
+import br.com.fintech.models.entities.concrete.User;
 
 public class Login {
     private static User loggedUser = null;
