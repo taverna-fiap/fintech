@@ -1,7 +1,6 @@
 package br.com.fintech.models.entities.abstracts;
 import br.com.fintech.models.entities.concrete.CardInfo;
 import br.com.fintech.models.entities.concrete.TransactionLog;
-import br.com.fintech.models.entities.concrete.User;
 import br.com.fintech.models.enums.TransactionStatus;
 
 import java.math.BigDecimal;

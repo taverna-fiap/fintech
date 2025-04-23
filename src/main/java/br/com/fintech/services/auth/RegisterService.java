@@ -3,7 +3,6 @@ package br.com.fintech.services.auth;
 import br.com.fintech.models.entities.concrete.User;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class RegisterService {
     private static final List<User> users = new ArrayList<>();
