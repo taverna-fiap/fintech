@@ -7,8 +7,8 @@ import java.sql.Statement;
 
 public class DatabaseFactory {
     private static final String URL = "jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL";
-    private static final String USER = "rm559953";
-    private static final String PASS = "220304";
+    private static final String USER = "";
+    private static final String PASS = "";
 
 
     public static Connection connect() throws SQLException {
